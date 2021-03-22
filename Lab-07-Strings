@@ -1,0 +1,37 @@
+# Zhivaldo Fabio H.
+# 71200608
+
+'''
+Emil ingin tau ada berapa kata 'kamu' didalam lirik lagu nya dan ingin merubahnya menjadi nama doi nya. bantu Emil menemukan dan merubah nya menjadi nama doi nya (Michael).
+Just like the day that I met you. The day I thought forever. Said that you love me but that'll last for never It's cold outside Like when you walked out my life Why you walked out my life? 
+I get like this every time On these days that feel like you and me Heartbreak anniversary 'Cause I remember every time On these days that feel like you and me Heartbreak anniversary Do you ever think of me?
+'''
+"""
+Input = Kalimat yang mau di cari, Kata yg mau dicari, pilihan, Kata yg mau diganti.
+
+Process = Mencari dan menghitung kata yg ada dalam Kalimat, Merubah kata dalam Kalimat.
+
+Output = Kata dan Jumlah Kata yang dicari, Kalimat yang sudah dirubah. (dan pilihan)
+"""
+import time
+print('='*15,"Word Replacer",'='*15)
+print('Selamata Datang di program word Replace tools')
+
+sentence = str(input('Input Sentence : \n\n          '))
+print()
+search = str(input('Find word : '))
+result = sentence.count(search)
+print('\n There are',result,'"'+search+'"','in the sentence.\n')
+time.sleep(2)
+
+print ('Do you want to replace it?\n 1. Yes \n 2. Exit')
+choice = input('>> ')
+if choice in '1':
+    print ('input replacement word for','"'+search+'"',':')
+    cari = input('>> ')
+    sentence_new = sentence.replace(search,cari)
+    print (sentence_new,'\n')
+elif choice in '2':
+    exit()
+else :
+    print ('WRONG INPUT!! Crashed!')
